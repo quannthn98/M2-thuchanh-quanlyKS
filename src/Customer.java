@@ -48,7 +48,7 @@ public class Customer {
                 ", Date of Birth: " + getDateOfBirth() +
                 ", NationalID: " + getNationalID() +
                 ", pending Payment: " + getPendingPayment() +
-                "$, is renting room " + getRentRoom() +
+                "$, is renting room class " + getRentRoom().getRoomType() +
                 " for " + getDayRent() + " day(s)";
     }
 

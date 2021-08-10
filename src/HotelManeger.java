@@ -14,8 +14,8 @@ public class HotelManeger {
     }
 
     public void createRoomType(){
-        roomClassA = new Room("A", 500, 0);
-        roomClassB = new Room("B", 250, 1);
+        roomClassA = new Room("A", 500, 5);
+        roomClassB = new Room("B", 250, 5);
     }
 
     public void checkIn(){
@@ -121,8 +121,8 @@ public class HotelManeger {
     public void getRoomInformation(){
         System.out.println("------------------------------------");
         System.out.println("We have 2 type of Room: A class and B class");
-        System.out.println(roomClassA.toString());
-        System.out.println(roomClassB.toString());
+        System.out.println("1. " + roomClassA.toString());
+        System.out.println("2. " + roomClassB.toString());
         System.out.println("------------------------------------");
     }
 
@@ -152,9 +152,9 @@ public class HotelManeger {
             getRoomInformation();
         } else if (roomClassA.isAvailable() && !roomClassB.isAvailable()){
             System.out.println(roomClassA.toString());
-            System.out.println("Room class B is out of order, please pick room A");
+            System.out.println("Room class B is out of order, please pick room class A");
         } else if (!roomClassA.isAvailable() && roomClassB.isAvailable()){
-            System.out.println("Room class A is out of order, please pick room B");
+            System.out.println("Room class A is out of order, please pick room class B");
             System.out.println(roomClassB.toString());
         } else {
             System.out.println("All room are out of order, we are sorry for that, hope you will comeback next time!");
